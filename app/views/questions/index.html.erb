@@ -1,0 +1,20 @@
+<h1>Create Question</h1>
+<div class="question-form">
+	<%= form_for @question do |f| %>
+		<div class="field">
+			<%= f.label :list %>
+			<%= f.text_area :list %>
+		</div>
+		<div class="field">
+			<%= f.submit %>
+		</div>
+	<% end %>
+</div>
+
+<% @questions.each do |question| %>
+	<div class="questions">
+		<div class="answer">
+			<%= question.answer %>
+		</div>
+	</div>
+<% end %>
